@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <configuration maxDuration="10m">
-    <workload numProducerThreads="4"  paymentPeriod="1ms" maintenancePeriod="1ms">
+    <!-- <workload duration="10m" numProducerThreads="4" paymentPeriod="1ms" maintenancePeriod="1ms">
+        <payloadSet startTime="0" endTime="120s" dataRate="100MB/s" payloadType="auto">
+                <payload proportionOfAllocation="25%" size="3kB" lifespan="60s" />
+                <payload proportionOfAllocation="50%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s" />
+                <payload proportionOfAllocation="25%" size="2kB" lifespan="100s" />
+        </payloadSet>
+        <payloadSet startTime="120s" endTime="240s" dataRate="20MB/s" payloadType="auto">
+                <payload proportionOfAllocation="10%" size="2kB" lifespan="15s" />
+                <payload proportionOfAllocation="10%" size="2kB" lifespan="70s" />
+                <payload proportionOfAllocation="20%" size="64kB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s" />
+                <payload proportionOfAllocation="20%" size="1kB" lifespan="5s" />
+                <payload proportionOfAllocation="40%" size="8MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s" />                                                                                                                                                           
+        </payloadSet>
+        <payloadSet startTime="240s" endTime="360s" dataRate="100MB/s" payloadType="auto">
+                <payload proportionOfAllocation="25%" size="3kB" lifespan="60s" />
+                <payload proportionOfAllocation="25%" size="2MB" lifespan="20s" />
+                <payload proportionOfAllocation="25%" size="2kB" lifespan="60s" />
+                <payload proportionOfAllocation="25%" size="2kB" lifespan="110s" />
+        </payloadSet>
+        <payloadSet startTime="360s" endTime="480s" dataRate="20MB/s" payloadType="auto">
+                <payload proportionOfAllocation="10%" size="2kB" lifespan="15s" />
+                <payload proportionOfAllocation="10%" size="2kB" lifespan="70s" />
+                <payload proportionOfAllocation="20%" size="1kB" lifespan="60s" />
+                <payload proportionOfAllocation="20%" size="1kB" lifespan="5s" />
+                <payload proportionOfAllocation="40%" size="64kB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s" />                                                                                                                                                           
+        </payloadSet>
+        <payloadSet startTime="480s" dataRate="100MB/s" payloadType="auto">
+                <payload proportionOfAllocation="25%" size="3kB" lifespan="60s" />
+                <payload proportionOfAllocation="25%" size="2MB" lifespan="20s" />
+                <payload proportionOfAllocation="25%" size="2kB" lifespan="60s" />
+                <payload proportionOfAllocation="25%" size="2kB" lifespan="110s" />
+        </payloadSet>
+     </workload> -->
+
+    <!-- <workload numProducerThreads="4"  paymentPeriod="1ms" maintenancePeriod="1ms">
         <payloadSet dataRate="70MB/s" payloadType="auto">
             <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
             <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
         </payloadSet>
-    </workload>
+    </workload> -->
+
+    <workload numProducerThreads="4"  paymentPeriod="1ms" maintenancePeriod="1ms">
+       <payloadSet startTime="0" endTime="120s" dataRate="100MB/s" payloadType="auto">
+           <payload proportionOfAllocation="90%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="20s"/>
+           <payload proportionOfAllocation="10%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+       </payloadSet>
+        <payloadSet startTime="120s" dataRate="30MB/s" payloadType="auto">							
+                <payload proportionOfAllocation="50%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                <payload proportionOfAllocation="10%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="20s"/> 									
+                <payload proportionOfAllocation="10%" size="25kB" lifespan="12s" />							
+                <payload proportionOfAllocation="20%" size="25kB" lifespan="7s" />				
+                <payload proportionOfAllocation="10%" size="12kB" lifespan="12s" />												
+	</payloadSet>
+    </workload>
 </configuration>

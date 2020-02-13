@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<configuration maxDuration="15m">
+<configuration maxDuration="125m">
 	<!-- Test to force heap expansion and contraction  -->
-	<workload numProducerThreads="4" duration="10m" paymentPeriod="1ms" maintenancePeriod="1ms">
-		<payloadSet dataRate="100MB/s" startTime="0s" endTime="150s" payloadType="auto">
+	<workload numProducerThreads="4" duration="120m" paymentPeriod="1ms" maintenancePeriod="1ms">
+		<payloadSet dataRate="100MB/s" startTime="0s" endTime="600s" payloadType="auto">
 			<payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
 			<payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
 		</payloadSet>
-		<payloadSet dataRate="20MB/s" startTime="152s" endTime="240s" payloadType="auto">
+		<payloadSet dataRate="20MB/s" startTime="602s" endTime="1200s" payloadType="auto">
 			<payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
 			<payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
 		</payloadSet>
-		<payloadSet dataRate="100MB/s" startTime="242s" endTime="500s" payloadType="auto">
+		<payloadSet dataRate="100MB/s" startTime="1202s" endTime="1800s" payloadType="auto">
 			<payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
 			<payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
 		</payloadSet>
-		<payloadSet dataRate="20MB/s" startTime="502s" payloadType="auto">
+		<payloadSet dataRate="20MB/s" startTime="1802s" endTime="2400s" payloadType="auto">
 			<payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
 			<payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
 		</payloadSet>
+		<payloadSet dataRate="100MB/s" startTime="2402s" endTime="3000s" payloadType="auto">
+                        <payload proportionOfAllocation="60%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+			<payload proportionOfAllocation="20%" size="75MB" sizeRadius="20MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="10s"/>
+                </payloadSet>
+                <payloadSet dataRate="20MB/s" startTime="3002s" endTime="3600s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
+                <payloadSet dataRate="120MB/s" startTime="3602s" endTime="4200s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
+                <payloadSet dataRate="30MB/s" startTime="4202s" endTime="4800s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
+		<payloadSet dataRate="100MB/s" startTime="4802s" endTime="5400s" payloadType="auto">
+                        <payload proportionOfAllocation="50%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+			<payload proportionOfAllocation="30%" size="100MB" sizeRadius="15MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="15s"/>
+                </payloadSet>
+                <payloadSet dataRate="20MB/s" startTime="5402s" endTime="6000s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
+                <payloadSet dataRate="90MB/s" startTime="6002s" endTime="6600s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
+                <payloadSet dataRate="40MB/s" startTime="6602s" payloadType="auto">
+                        <payload proportionOfAllocation="80%" size="5MB" sizeRadius="5MB" sizeVariance="3MB" lifespan="2s" lifespanRadius="2s"/>
+                        <payload proportionOfAllocation="20%" size="50MB" sizeRadius="10MB" sizeVariance="5MB" lifespan="20s" lifespanRadius="5s"/>
+                </payloadSet>
 	</workload>
 </configuration>
